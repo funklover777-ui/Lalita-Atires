@@ -1,0 +1,241 @@
+/* Shop Page Styles */
+.shop-header {
+    background: linear-gradient(135deg, #8b1538 0%, #8b5a2b 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.shop-header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.shop-header p {
+    font-size: 16px;
+    color: #d4af37;
+}
+
+.shop-content {
+    padding: 40px 20px;
+}
+
+.shop-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+/* Sidebar */
+.shop-sidebar {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 100px;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-group h3 {
+    color: #8b1538;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.filter-group label:hover {
+    color: #8b1538;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: #8b1538;
+}
+
+.size-guide-btn {
+    display: block;
+    text-align: center;
+    background-color: #d4af37;
+    color: #8b1538;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.size-guide-btn:hover {
+    background-color: #8b1538;
+    color: white;
+}
+
+/* Shop Main */
+.shop-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.sort-filter {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(139, 21, 56, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #d4af37 0%, #8b1538 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 50px;
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #8b1538;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-category {
+    font-size: 12px;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-name {
+    font-size: 16px;
+    color: #8b1538;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.product-rating {
+    color: #d4af37;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-size: 16px;
+    color: var(--dark);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-sizes {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.product-sizes .size {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-sizes .size:hover {
+    border-color: #8b1538;
+    background-color: #8b1538;
+    color: white;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #8b1538;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #8b5a2b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-sidebar {
+        position: static;
+    }
+
+    .shop-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
